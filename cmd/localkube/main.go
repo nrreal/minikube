@@ -25,12 +25,13 @@ import (
 
 func main() {
 
-	// Create the localkube server and parse the flags
+	// create the local kube server and parse the flags 
 	cmd.Server = cmd.NewLocalkubeServer()
 	cmd.AddFlags(cmd.Server)
-
+	//cmd.AddFlags(cmd.LocalKImple)
 	if err := cmd.RootCmd.Execute(); err != nil {
 		fmt.Println(err)
+		//os.Exit(0)
 		os.Exit(-1)
 	}
 }
